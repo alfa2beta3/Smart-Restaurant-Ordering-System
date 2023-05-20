@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Seat Booking</title>
+  <style>
+    #header {
+      background-image: url('bookseat.jpg');
+      background-size: cover;
+      height: 600px; /* Adjust the height as needed */
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var buttons = [
+        { seatNumber: '01', ipAddress: 'http://192.168.137.2' },
+        { seatNumber: '02', ipAddress: 'http://192.168.137.3' },
+        { seatNumber: '03', ipAddress: 'http://192.168.137.4' }
+        // Add more button details here
+      ];
+
+      $('#bookButton').click(function() {
+        bookSeat('01', 'http://192.168.137.2');
+      });
+
+      function bookSeat(seatNumber, ipAddress) {
+        $.ajax({
+          url: ipAddress + '/25/on',
+          type: 'GET',
+          success: function(response) {
+            alert('Seat ' + seatNumber + ' booked successfully!');
+            // You can add additional code here to handle the successful booking response
+          },
+          error: function(xhr, status, error) {
+            alert('Error occurred while booking Seat ' + seatNumber + '.');
+            // You can add additional code here to handle the error response
+          }
+        });
+      }
+
+      // Create buttons dynamically
+      for (var i = 0; i < buttons.length; i++) {
+        var button = buttons[i];
+        $('<button>')
+          .addClass('bookButton')
+          .attr('data-seat-number', button.seatNumber)
+          .attr('data-ip-address', button.ipAddress)
+          .text('Book Seat ' + button.seatNumber)
+          .appendTo('body');
+      }
+
+      // Event handler for all book buttons
+      $('.bookButton').click(function() {
+        var seatNumber = $(this).data('seat-number');
+        var ipAddress = $(this).data('ip-address');
+        bookSeat(seatNumber, ipAddress);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="header"></div>
+  <h1>Restaurant Seat Booking</h1>
+</body>
+</html>
