@@ -231,7 +231,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./reserve.html" class="nav-link active">
+                <a href="./bookseat.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reserve</p>
                 </a>
