@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Seat Booking</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#bookButton25').click(function() {
+        bookSeat(25);
+      });
+
+      $('#bookButton26').click(function() {
+        bookSeat(26);
+      });
+
+      $('#bookButton27').click(function() {
+        bookSeat(27);
+      });
+
+      function bookSeat(seatNumber) {
+        $.ajax({
+          url: 'http://192.168.137.2/' + seatNumber + '/on',
+          type: 'GET',
+          success: function(response) {
+            alert('Seat ' + seatNumber + ' booked successfully!');
+            // You can add additional code here to handle the successful booking response
+          },
+          error: function(xhr, status, error) {
+            alert('Error occurred while booking Seat ' + seatNumber + '.');
+            // You can add additional code here to handle the error response
+          }
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Restaurant Seat Booking</h1>
+  <button id="bookButton25">Book Seat 25</button>
+  <button id="bookButton26">Book Seat 26</button>
+  <button id="bookButton27">Book Seat 27</button>
+</body>
+</html>
