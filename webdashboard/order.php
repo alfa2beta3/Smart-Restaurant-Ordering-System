@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -374,7 +375,7 @@
             <div class="info-box">
                 <span>
                 <!-- Small button -->
-                <a href ="foods.html" >
+                <a href ="foods_v2.php" >
                         <img src= "diet.png" alt="Foods Icon" width = 50 height = 50>
                      </a>
                        <!-- Small button -->
