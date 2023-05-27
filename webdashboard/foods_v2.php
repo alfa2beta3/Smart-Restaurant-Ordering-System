@@ -1,3 +1,41 @@
+<?php
+// database connection code
+$conn = mysqli_connect('localhost', 'root', '', 'rms2');
+
+if (isset($_POST['foodName'])) {
+  $txtTime = date("Y-m-d H:i:s");
+  $txtName = "John";
+  $txtDish = $_POST['foodName'];
+  $txtNumber = "1";
+
+  // database insert SQL code
+  $sql = "INSERT INTO `orders` (`time`, `name`, `dish`, `number`) VALUES ('$txtTime', '$txtName', '$txtDish', '$txtNumber')";
+
+  // insert in database
+  $rs = mysqli_query($conn, $sql);
+
+  if ($rs) {
+    echo "Records Inserted";
+  }
+}
+?>
+
+<script>
+  function sendRequest(foodName) {
+    // Send the foodName parameter to the PHP script using AJAX
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'foods_v2.php', true); // Replace 'food_list.php' with the filename of your PHP script
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log('Response:', xhr.responseText);
+      }
+    };
+    const data = 'foodName=' + encodeURIComponent(foodName); // Encode the foodName parameter
+    xhr.send(data);
+  }
+</script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,41 +91,12 @@
     echo '<img class="food-image" src="' . $food['image'] . '" alt="' . $food['name'] . '">';
     echo '<div>';
     echo '<p class="food-name">' . $food['name'] . '</p>';
-    echo '<button class="food-button"  onclick="sendRequest(\'' . $food['name'] . '\')">Book</button>';
+    echo '<button class="food-button" onclick="sendRequest(\'' . $food['name'] . '\')">Book</button>';
     echo '</div>';
     echo '</div>';
-    
   }
   echo '</div>';
-
   ?>
-  
+
 </body>
 </html>
-
-<script>
-function sendRequest(foodName) {
-  const url = 'https://example.com/api'; // Replace with the URL of the other website's API
-
-  fetch(url, {
-    method: 'POST',
-    body: JSON.stringify({ foodName: foodName }),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(response => {
-    if (response.ok) {
-      // Request successful
-      console.log('Request sent successfully');
-      // You can perform any additional actions here
-    } else {
-      // Request failed
-      console.error('Error sending request');
-    }
-  })
-  .catch(error => {
-    console.error('Error sending request:', error);
-  });
-}
-</script>
