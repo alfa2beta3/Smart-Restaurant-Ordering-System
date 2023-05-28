@@ -1,4 +1,10 @@
 <?php
+
+// Globally define the Timezone
+define( 'TIMEZONE', 'Asia/Singapore' );
+
+// Set Timezone
+date_default_timezone_set( TIMEZONE );
 // database connection code
 $conn = mysqli_connect('localhost', 'root', '', 'rms2');
 
@@ -15,25 +21,33 @@ if (isset($_POST['foodName'])) {
   $rs = mysqli_query($conn, $sql);
 
   if ($rs) {
-    echo "Records Inserted";
+    echo "Records Inserted \n";
+    
+    echo $txtTime;
   }
 }
 ?>
 
 <script>
   function sendRequest(foodName) {
-    // Send the foodName parameter to the PHP script using AJAX
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'foods_v2.php', true); // Replace 'food_list.php' with the filename of your PHP script
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        console.log('Response:', xhr.responseText);
-      }
-    };
-    const data = 'foodName=' + encodeURIComponent(foodName); // Encode the foodName parameter
-    xhr.send(data);
-  }
+  // Add animation class to the button
+  const button = event.target;
+  button.classList.add('animate');
+
+  // Send the foodName parameter to the PHP script using AJAX
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'foods_v2.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log('Response:', xhr.responseText);
+      // Remove animation class after receiving the response
+      button.classList.remove('animate');
+    }
+  };
+  const data = 'foodName=' + encodeURIComponent(foodName);
+  xhr.send(data);
+}
 </script>
 
 <!DOCTYPE html>
@@ -65,6 +79,36 @@ if (isset($_POST['foodName'])) {
       border: none;
       cursor: pointer;
     }
+
+    .animate {
+    animation-name: myAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out; /* Example of an animation timing function */
+    animation-delay: 0.2s; /* Example of an animation delay */
+    animation-iteration-count: 1; /* Example of the number of times the animation should repeat */
+    animation-direction: normal; /* Example of the animation direction */
+    /* Additional animation properties */
+  }
+
+  @keyframes myAnimation {
+    0% {
+      /* Initial state */
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    50% {
+      /* Mid-state */
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+
+    100% {
+      /* Final state */
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
   </style>
 </head>
 <body>
@@ -85,7 +129,6 @@ if (isset($_POST['foodName'])) {
     array('name' => $foodname['7'], 'image' => $foodimages['7']),
   );
   // Generate HTML for each food item
-  echo '<div class="col-lg-3 col-6">';
   foreach ($foods as $food) {
     echo '<div class="food-item">';
     echo '<img class="food-image" src="' . $food['image'] . '" alt="' . $food['name'] . '">';
@@ -95,7 +138,6 @@ if (isset($_POST['foodName'])) {
     echo '</div>';
     echo '</div>';
   }
-  echo '</div>';
   ?>
 
 </body>
