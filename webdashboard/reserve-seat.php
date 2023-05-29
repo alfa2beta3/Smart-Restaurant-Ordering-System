@@ -16,45 +16,79 @@
   <h1>Book your seat!!</h1>
   <table>
     <tr>
-      <th>Number</th>
-      <th>Table Numbers</th>
-      <th>Status</th>
+      <th>Time</th>
+      <th>A0</th>
+      <th>A1</th>
+      <th>A2</th>
     </tr>
-    <tr>
-      <td>1</td>
-      <td>A1</td>
-      <td>
-        <span id="status1">Booked</span>
-        <button onclick="changeStatus(1)">Toggle</button>
-      </td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>A2</td>
-      <td>
-        <span id="status2">Booked</span>
-        <button onclick="changeStatus(2)">Toggle</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>A3</td>
-      <td>
-        <span id="status3">Booked</span>
-        <button onclick="changeStatus(3)">Toggle</button>
-      </td>
-    </tr>
+    <?php
+      // Establish your SQL database connection here
+
+      // Assuming you have a table called "seat_booking" with columns "time", "A0", "A1", "A2", "A3"
+      // Modify the connection details according to your database setup
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "rms2";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
+      // SQL query to retrieve seat data
+      $sql = "SELECT `time`, `A0`, `A1`, `A2`, `A3` FROM `seat_booking` ORDER BY `time` DESC LIMIT 1";
+      $result = $conn->query($sql);
+
+      // Generate HTML based on retrieved data
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          $time = $row["time"];
+
+          echo '<tr>';
+          echo '<td>' . $time . '</td>';
+
+          // Seat A0
+          $A0 = $row["A0"];
+          $toggleA0 = ($A0 === "0") ? "false" : "true";
+          echo '<td>';
+          echo '<span id="statusA0">' . ($A0 === "0" ? "Booked" : "Opened") . '</span>';
+          echo '</td>';
+
+          // Seat A1
+          $A1 = $row["A1"];
+          $toggleA1 = ($A1 === "0") ? "false" : "true";
+          echo '<td>';
+          echo '<span id="statusA1">' . ($A1 === "0" ? "Booked" : "Opened") . '</span>';
+          echo '</td>';
+
+          // Seat A2
+          $A2 = $row["A2"];
+          $toggleA2 = ($A2 === "0") ? "false" : "true";
+          echo '<td>';
+          echo '<span id="statusA2">' . ($A2 === "0" ? "Booked" : "Opened") . '</span>';
+          echo '</td>';
+
+          echo '</tr>';
+        }
+      } else {
+        echo "No seats found.";
+      }
+
+      // Close the database connection
+      $conn->close();
+    ?>
   </table>
 
   <script>
-    var sts = ["Booked", "Booked", "Booked"]; // Initial status
-    var toggle = ["false","false","false"]; // Boolean to toggle status
-
     // Function to update status
-    function changeStatus(row) {
-      toggle[row - 1] = !toggle[row - 1];
-      var statusSpan = document.getElementById("status" + row);
-      statusSpan.textContent = toggle [row - 1]? sts[row - 1] : (sts[row - 1] === "Booked" ? "Opened" : "Booked");
+    function changeStatus(seat) {
+      var statusSpan = document.getElementById("status" + seat);
+      var status = statusSpan.textContent;
+      statusSpan.textContent = (status === "Booked") ? "Opened" : "Booked";
     }
   </script>
 </body>
