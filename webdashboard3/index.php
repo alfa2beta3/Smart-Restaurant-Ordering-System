@@ -216,6 +216,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="reserve-seat.php" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Reserve Seat
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
