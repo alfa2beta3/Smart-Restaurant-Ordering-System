@@ -13,15 +13,11 @@
   <script>
     $(document).ready(function() {
       var buttons = [
-        { seatNumber: '01', ipAddress: 'http://192.168.137.2' },
-        { seatNumber: '02', ipAddress: 'http://192.168.137.3' },
-        { seatNumber: '03', ipAddress: 'http://192.168.137.4' }
+        { seatNumber: '1', ipAddress: 'http://192.168.137.2' },
+        { seatNumber: '2', ipAddress: 'http://192.168.137.3' },
+        { seatNumber: '3', ipAddress: 'http://192.168.137.4' }
         // Add more button details here
       ];
-
-      $('#bookButton').click(function() {
-        bookSeat('01', 'http://192.168.137.2');
-      });
 
       function bookSeat(seatNumber, ipAddress) {
         $.ajax({
@@ -35,6 +31,22 @@
             alert('Error occurred while booking Seat ' + seatNumber + '.');
             // You can add additional code here to handle the error response
           }
+        });
+      }
+
+      function toDB(seatNumber) {
+        $.ajax({
+         url: 'write_to_db.php',
+         type: 'POST',
+          data: { seatNumber: seatNumber },
+           success: function(response) {
+           alert('Seat ' + seatNumber + ' written to database successfully!');
+           // You can add additional code here to handle the successful database write response
+         },
+         error: function(xhr, status, error) {
+             alert('Function not executed while writing Seat ' + seatNumber + ' to the database.');
+           // You can add additional code here to handle the error response
+         }
         });
       }
 
@@ -54,6 +66,7 @@
         var seatNumber = $(this).data('seat-number');
         var ipAddress = $(this).data('ip-address');
         bookSeat(seatNumber, ipAddress);
+        toDB(seatNumber);
       });
     });
   </script>
