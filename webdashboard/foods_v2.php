@@ -1,3 +1,14 @@
+
+<?php
+$path = 'idcount.txt';
+
+// Opens countlog.txt to read the number of hits.
+$file  = fopen( $path, 'r' );
+$txtId = fgets( $file, 1000 );
+fclose( $file );
+
+?>
+
 <?php
 
 // Globally define the Timezone
@@ -12,10 +23,10 @@ if (isset($_POST['foodName'])) {
   $txtTime = date("Y-m-d H:i:s");
   $txtName = "John";
   $txtDish = $_POST['foodName'];
-  $txtNumber = "1";
+  $txtSeat = "1";
 
   // database insert SQL code
-  $sql = "INSERT INTO `orders` (`time`, `name`, `dish`, `number`) VALUES ('$txtTime', '$txtName', '$txtDish', '$txtNumber')";
+  $sql = "INSERT INTO `orders` (`id`,`time`, `name`, `dish`, `number`) VALUES ('$txtId', '$txtTime', '$txtName', '$txtDish', '$txtSeat')";
 
   // insert in database
   $rs = mysqli_query($conn, $sql);
@@ -25,7 +36,16 @@ if (isset($_POST['foodName'])) {
     
     echo $txtTime;
   }
+
+  // Include the PHP file that contains the function
+  require_once 'counter.php';
+  
+  // Call the function
+  inc();
+
 }
+
+
 ?>
 
 <script>
