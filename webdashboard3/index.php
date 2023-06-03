@@ -216,10 +216,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="reserve-seat.php" class="nav-link">
+            <a href="available-seats.php" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
-                Reserve Seat
+                Available Seats
               </p>
             </a>
           </li>
