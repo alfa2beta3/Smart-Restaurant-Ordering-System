@@ -91,6 +91,29 @@
     ?>
   </table>
 
+  <h1> Unbook Seats!!</h1>
+  <table>
+    <tr>
+      <th>A0</th>
+      <th>A1</th>
+      <th>A2</th>
+      <th>A3</th>
+    </tr>
+    <td>
+      button-1
+    </td>
+    <td>
+      button-2
+    </td>
+    <td>
+      button-3
+    </td>
+    <td>
+      button-4
+    </td>
+  </table>
+
+
   <script>
     // Function to update status
     function changeStatus(seat) {
