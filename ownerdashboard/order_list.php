@@ -28,15 +28,16 @@
                     url: 'update_status.php',
                     method: 'POST',
                     data: { id: id, sts: sts },
-                    success: function(response) {
-                        alert('Status updated successfully!');
+                    //success: function(response) {
+                    //    alert('Status updated successfully!');
                         // You can add additional code here to handle the successful update response
-                    },
+                    //},
                     error: function(xhr, sts, error) {
                         alert('Error occurred while updating status.');
                         // You can add additional code here to handle the error response
                     }
                 });
+                window.location.reload(true);
             }
         });
     </script>
@@ -89,7 +90,22 @@
                         <?php
                         $id = isset($order['id']) ? $order['id'] : "";
                         $sts = isset($order['status']) ? $order['status'] : "0";
-                        $buttonText = ($sts === "0") ? "Ready" : "Finished";
+                        switch ($sts) {
+                            case "0":
+                                $buttonText = "Approved" ;
+                              break;
+                            case "1":
+                                $buttonText = "Preparing" ;
+                              break;
+                            case "2":
+                                $buttonText = "Ready" ;
+                              break;
+                            case "3":
+                                $buttonText = "Finished" ;
+                              break;
+                            default:
+                              $buttonText = "Failed to get status";
+                          }
                         ?>
                         <button class="status-button" data-id="<?php echo $id; ?>" data-sts="<?php echo $sts; ?>"><?php echo $buttonText; ?></button>
                     </td>
