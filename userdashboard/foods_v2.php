@@ -24,9 +24,10 @@ if (isset($_POST['foodName'])) {
   $txtName = "John";
   $txtDish = $_POST['foodName'];
   $txtSeat = "1";
+  $txtStatus = "0";
 
   // database insert SQL code
-  $sql = "INSERT INTO `orders` (`id`,`time`, `name`, `dish`, `number`) VALUES ('$txtId', '$txtTime', '$txtName', '$txtDish', '$txtSeat')";
+  $sql = "INSERT INTO `orders` (`id`,`time`, `name`, `dish`, `number`,`status` ) VALUES ('$txtId', '$txtTime', '$txtName', '$txtDish', '$txtSeat','$txtStatus' )";
 
   // insert in database
   $rs = mysqli_query($conn, $sql);
