@@ -5,8 +5,13 @@ if ($conn) {
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $id = $_POST["id"];
         $sts = $_POST["sts"];
-        $sts = ($sts === "0") ? "1" : "0";
+
+        if ($sts < 3)
+        $sts ++;
+        else
+        $sts = "0";
         echo 'sts is' . $sts;
+
 
         $query = "UPDATE `orders` SET `status` = '$sts' WHERE `id` = $id";
         $result = mysqli_query($conn, $query);
