@@ -8,6 +8,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $password = "";     // Replace with your database password
   $dbname = "rms2";       // Replace with your database name
 
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
+      // SQL query to retrieve seat data
+      $sql = "SELECT `time`, `A0`, `A1`, `A2`, `A3` FROM `seat_booking` ORDER BY `time` DESC LIMIT 1";
+      $result = $conn->query($sql);
+
+      // Generate HTML based on retrieved data
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          $A0 = $row["A0"];
+          $A1 = $row["A1"];
+          $A2 = $row["A2"];
+          $A3 = $row["A3"];
+        }
+      }else {
+        echo "No seats found.";
+      }
+      $conn->close();
+
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -21,10 +45,23 @@ $stmt = $conn->prepare("INSERT INTO seat_booking (time, A0, A1, A2, A3) VALUES (
 
 // Generate the values based on seatNumber
 $time = date("Y-m-d H:i:s");  // Current timestamp
-$A0 = ($seatNumber == 0) ? 1 : 0;
-$A1 = ($seatNumber == 1) ? 1 : 0;
-$A2 = ($seatNumber == 2) ? 1 : 0;
-$A3 = ($seatNumber == 3) ? 1 : 0;
+
+switch ($seatNumber) {
+  case 0:
+    $A0 = 1;
+    break;
+  case 1:
+    $A1 = 1;
+    break;
+  case 2:
+    $A2 = 1;
+    break;
+  case 3:
+    $A3 = 1;
+    break;
+  default:
+    $A0 = 1;
+}
 
 $stmt->bind_param("siiii", $time, $A0, $A1, $A2, $A3);
 
