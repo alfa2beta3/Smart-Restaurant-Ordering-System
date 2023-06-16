@@ -109,7 +109,7 @@ void loop() {
             client.println("text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}</style></head>");
             
             client.println("<body><h1>ESP32 Web Server</h1>");
-            client.println("<p><a href=\"/25/on\"><button class=\"button\">Book Seat 25</button></a></p>");
+            client.println("<p><a href=\"/16/on\"><button class=\"button\">Book Seat 25</button></a></p>");
             client.println("</body></html>");
             client.println();
             break;
@@ -139,22 +139,23 @@ void meow() {
   uint16_t j;
 
   for (j=0;j<10;j++){
-      playTone(5100, 50);
-      playTone(394, 180);
-        for (i = 990; i < 1022; i += 2)
-        playTone(i, 8);
-        playTone(5100, 40);
+      delay(1000);
+      playTone(5100, 40);
+      playTone(194, 200);
+        for (i = 590; i < 622; i += 4)
+        playTone(i, 40);
+        playTone(2700, 200);
   }
 }
 
 void meow2() {
   uint16_t i;
-  playTone(5100, 55);
-  playTone(394, 170);
-  delay(30);
+  playTone(5100, 1100);
+  playTone(394, 3400);
+  delay(600);
   for (i = 330; i < 360; i += 2)
-    playTone(i, 10);
-  playTone(5100, 40);
+    playTone(i, 200);
+  playTone(5100, 800);
 }
 
 void mew() {
