@@ -10,7 +10,6 @@ Adafruit_NeoPixel pixels = Adafruit_NeoPixel(5, 4, NEO_GRB + NEO_KHZ800);
 
 // Pin assignments
 #define SPEAKER 2
-//const int output25 = 25;
 
 // Web server configuration
 WiFiServer server(80);
@@ -26,6 +25,7 @@ void meow2();
 void mew();
 void ruff();
 void arf();
+void nobitaSound();
 void playTone(uint16_t tone1, uint16_t duration);
 
 void setup() {
@@ -58,7 +58,7 @@ void loop() {
 //  pixels.show();
   
   // Play sound
-  meow();
+ // meow();
 
   // Handle incoming client requests
   WiFiClient client = server.available();
@@ -83,7 +83,16 @@ void loop() {
             client.println();
             
             // Process specific requests
-            if (header.indexOf("GET /25/on") >= 0) {
+
+            // Process specific requests
+            if (header.indexOf("GET /16/on") >= 0) {
+              Serial.println("GPIO 16 on");
+              meow();
+              Serial.println("meow");
+              client.println("<h2>meow meow</h2>");
+            }
+
+             if (header.indexOf("GET /25/on") >= 0) {
               Serial.println("GPIO 25 on");
               //digitalWrite(output25, HIGH);
               getLedOn();
@@ -127,11 +136,15 @@ void chirp() {
 
 void meow() {
   uint16_t i;
-  playTone(5100, 50);
-  playTone(394, 180);
-  for (i = 990; i < 1022; i += 2)
-    playTone(i, 8);
-  playTone(5100, 40);
+  uint16_t j;
+
+  for (j=0;j<10;j++){
+      playTone(5100, 50);
+      playTone(394, 180);
+        for (i = 990; i < 1022; i += 2)
+        playTone(i, 8);
+        playTone(5100, 40);
+  }
 }
 
 void meow2() {
@@ -187,9 +200,7 @@ void getLedOn(){
   pixels.setPixelColor(4, 0x33cc00);
   pixels.show();
   pixels.show();
-  
-  // Play sound
-  meow();
+
 }
 
 
@@ -202,6 +213,4 @@ void getLedOff(){
   pixels.show();
   pixels.show();
   
-  // Play sound
-  meow();
 }
