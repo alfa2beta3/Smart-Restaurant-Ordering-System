@@ -1,7 +1,6 @@
-#include "SevSeg.h"  /* Included seven-segment library */
 #include <WiFi.h>    /* Added WiFi library */
-
-SevSeg sevseg;       /* Create a seven-segment library */
+#include <LiquidCrystal_I2C.h>
+#include "SevSeg.h"  /* Included seven-segment library */
 
 //WIFI Network Credentials
 const char* ssid = "ASUS 1986";
@@ -14,9 +13,33 @@ unsigned long currentTime = millis();
 unsigned long previousTime = 0;
 const long timeoutTime = 2000;
 
-short table = 0;
+// Set your Static IP address
+IPAddress local_IP(192, 168, 137, 100);
+// Set your Gateway IP address
+IPAddress gateway(192, 168, 1, 1);
 
-  
+IPAddress subnet(255, 255, 255, 0);
+IPAddress primaryDNS(8, 8, 8, 8);   //optional
+IPAddress secondaryDNS(8, 8, 4, 4); //optional
+
+
+SevSeg sevseg;       /* Create a seven-segment library */
+
+// set the LCD number of columns and rows
+int lcdColumns = 16;
+int lcdRows = 2;
+
+// set LCD address, number of columns and rows
+// if you don't know your display address, run an I2C scanner sketch
+LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows); 
+
+short table = 0;
+short tables[3] = {0,0,0};
+String words = ""; 
+String printTables;
+
+short i = 0;
+short j = 0;
 
 void setup()
 {
@@ -26,7 +49,17 @@ void setup()
   bool resistorsOnSegments = true; /* Assign Boolean type to the registers of the seven-segment */
   sevseg.begin(COMMON_ANODE, sevenSegments, CommonPins, LEDsegmentPins, resistorsOnSegments); /* Seven-segment configuration */
   sevseg.setBrightness(80);  /* Seven segment brightness */
+  
+  // initialize LCD
+  lcd.init();
+  // turn on LCD backlight                      
+  lcd.backlight();
 
+   // Configures static IP address
+  if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
+    Serial.println("STA Failed to configure");
+  }
+  
   Serial.begin(9600);
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
@@ -71,40 +104,47 @@ void loop()
             if (header.indexOf("GET /17/on") >= 0) {
               Serial.println("GPIO 17 on");
               table = 0;
-              table = table <<1 + 1;
+              table = table + 1;
+              Serial.println("Table is");
+              Serial.println(table);
               client.println("GPIO 17 on");
+              if (j<3)
+                j++;
+              else
+                j = 0;
+            }
+              if (header.indexOf("GET /17/off") >= 0) {
+              Serial.println("GPIO 17 off");
+              table = 0;
+              Serial.println("Table is");
+              Serial.println(table);
+              client.println("GPIO 17 off");
+              if (j<3)
+                j++;
+              else
+                j = 0;
             }
             if (header.indexOf("GET /18/on") >= 0) {
               Serial.println("GPIO 18 on");
-              table = table <<1 + 1;
+              table = table + (1<<1);
+              Serial.println("Table is");
+              Serial.println(table);
               client.println("GPIO 18 on");
-            }
-            if (header.indexOf("GET /18/off") >= 0) {
-              Serial.println("GPIO 18 off");
-              table = table <<1;
-              client.println("GET /18/off");
             }
             if (header.indexOf("GET /19/on") >= 0) {
               Serial.println("GPIO 19 on");
-              table = table <<1 + 1;
+              table = table + (1<<2);
+              Serial.println("Table is");
+              Serial.println(table);
               client.println("GET /19/on");
-            }
-            if (header.indexOf("GET /19/off") >= 0) {
-              Serial.println("GPIO 19 off");
-              table = table <<1;
-              client.println("GET /19/off");
             }
             if (header.indexOf("GET /20/on") >= 0) {
               Serial.println("GPIO 20 on");
-              table = table <<1 + 1;
+              table = table + (1<<3);
+              Serial.println("Table is");
+              Serial.println(table);
               client.println("GET /20/on");
             }
-            if (header.indexOf("GET /20/off") >= 0) {
-              Serial.println("GPIO 20 off");
-              table = table <<1;
-              client.println("GET /20/off");
-            }
-            
             
             // Send HTML web page
             client.println("<!DOCTYPE html><html>");
@@ -131,13 +171,29 @@ void loop()
     client.stop();
     Serial.println("Client disconnected.");
     Serial.println("");
-  }
-  Serial.println("table is");
-  Serial.println(table);
-   for(int i = 0; i < 10; i++)   /* Display number from 0 to 9 using for loop */
-   {
-     sevseg.setNumber(i);
-     sevseg.refreshDisplay(); /* Refresh seven-segment display after each iteration */
-     delay(1000);    /* Time delay for loop iteration */
-   }
+    Serial.println("table is");
+    Serial.println(table);
+
+    tables[j] = table;
+}
+
+    if (i<3)
+      i++;
+    else
+      i = 0;
+  
+  words = "Please take your orders";
+  printTables = String(tables[i]);
+  
+   // set cursor to first column, first row
+  lcd.setCursor(0, 0);
+  // print message
+  lcd.print(words);
+  delay(1000);
+  // clears the display to print new message
+  // set cursor to first column, second row
+  lcd.setCursor((i*7),1);
+  lcd.print(printTables);
+  delay(1000);
+  lcd.clear(); 
 }
