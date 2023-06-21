@@ -95,7 +95,8 @@
 * <code><img width="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code> <strong> HTML </strong>
 * <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/></code> <strong> CSS </strong>
 * <code><img width="50" src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/Icons/96018_xampp_icon.png" alt="CSS" title="XAMPP"/></code> <strong> XAMPP </strong>
-* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/190887576-6653f877-8439-4521-82f3-403086ead892.png" alt="Sublime Text" title="Sublime Text"/></code> <strong> Sublime Text </strong>
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/190887576-6653f877-8439-4521-82f3-403086ead892.png" alt="Sublime Text" title="Sublime Text"/></code>
+* <strong> Sublime Text </strong>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +114,7 @@ To get this project run on your pc, please install the relevant tools, by follow
 1. xampp 
    * Go to the website  [XAMPP](https://www.apachefriends.org/)
    * Select XAMPP for Windows
-     <br> <code><img src=”pictures/XAMPP.png” alt=”XAMPP download page”></code>
+     <br> <img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/XAMPP.png" alt="XAMPP download page">
    * 
 
 ### Installation
