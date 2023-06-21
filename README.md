@@ -40,11 +40,11 @@
     <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/Demo">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/issues">Request Feature</a>
   </p>
 </div>
 
