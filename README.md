@@ -37,7 +37,7 @@
     The system consist of a table hardware, a website, a hardware at the counter, and a payment system.
     
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="[https://github.com/github_username/repo_name](https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System.git)"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
