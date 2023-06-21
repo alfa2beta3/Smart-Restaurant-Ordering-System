@@ -89,12 +89,13 @@
 
 ### Built With
 
-* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183570228-6a040b9f-3ddf-47a2-a201-743121dac664.png" alt="php" title="php"/></code>
-* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript"/></code>
-* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" alt="MySQL" title="MySQL"/></code>
-* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code>
-* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/></code>
-* [![JQuery][JQuery.com]][JQuery-url]
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183570228-6a040b9f-3ddf-47a2-a201-743121dac664.png" alt="php" title="php"/></code> <strong> php </strong>
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript"/></code> <strong> JavaScript </strong>
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" alt="MySQL" title="MySQL"/></code> <strong> MySQL </strong>
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code> <strong> HTML </strong>
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/></code> <strong> CSS </strong>
+* <code><img width="50" src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/Icons/96018_xampp_icon.png" alt="CSS" title="XAMPP"/></code> <strong> XAMPP </strong>
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/190887576-6653f877-8439-4521-82f3-403086ead892.png" alt="Sublime Text" title="Sublime Text"/></code> <strong> Sublime Text </strong>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,16 +104,17 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The project is tested and run on Windows.
+To get a local copy up and running, please follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+To get this project run on your pc, please install the relevant tools, by following the instructions below.
+1. xampp 
+   * Go to the website  [XAMPP](https://www.apachefriends.org/)
+   * Select XAMPP for Windows
+     <img src=”(your title)” alt=”Image” height=”(your image height)” width=”(your image width)”>.
+   * 
 
 ### Installation
 
