@@ -83,8 +83,6 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `alfa2beta3`, `Smart-Restaurant-Ordering-System`, `XingYangLe21649`, `xing-yang-lee-362a54181`, `gmail`, `leexingyang180`, `Smart Restaurant Ordering System`, `The project is a IOT system used for restaurant and small food court. The system consist of several parts. There is a seat booking system, a digital menu, a system for chef to identify customers in just a click on screen, that the food is ready so that they can pick up the food, a hardware that show the food owners at the counter and a payment system.      The system consist of a table hardware, a website, a hardware at the counter, and a payment system.`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
