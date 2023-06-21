@@ -18,6 +18,15 @@ unsigned long currentTime = millis();
 unsigned long previousTime = 0;
 const long timeoutTime = 2000;
 
+// Set your Static IP address
+IPAddress local_IP(192, 168, 137, 2);
+// Set your Gateway IP address
+IPAddress gateway(192, 168, 1, 1);
+
+IPAddress subnet(255, 255, 255, 0);
+IPAddress primaryDNS(8, 8, 8, 8);   //optional
+IPAddress secondaryDNS(8, 8, 4, 4); //optional
+
 // Function declarations
 void chirp();
 void meow();
@@ -25,14 +34,19 @@ void meow2();
 void mew();
 void ruff();
 void arf();
-void nobitaSound();
-void playTone(uint16_t tone1, uint16_t duration);
 
 void setup() {
   Serial.begin(9600);
   pinMode(SPEAKER, OUTPUT);
   //pinMode(output25, OUTPUT);
   pixels.begin();
+  
+    // Configures static IP address
+  if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
+    Serial.println("STA Failed to configure");
+  }
+
+  //connect to wifi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
