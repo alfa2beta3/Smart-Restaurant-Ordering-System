@@ -83,7 +83,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `alfa2beta3`, `Smart-Restaurant-Ordering-System`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `alfa2beta3`, `Smart-Restaurant-Ordering-System`, `XingYangLe21649`, `xing-yang-lee-362a54181`, `gmail`, `leexingyang180`, `Smart Restaurant Ordering System`, `The project is a IOT system used for restaurant and small food court. The system consist of several parts. There is a seat booking system, a digital menu, a system for chef to identify customers in just a click on screen, that the food is ready so that they can pick up the food, a hardware that show the food owners at the counter and a payment system.      The system consist of a table hardware, a website, a hardware at the counter, and a payment system.`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,7 +193,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@XingYangLe21649](https://twitter.com/XingYangLe21649) - leexingyang180@gmail.com
 
 Project Link: [https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System](https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System)
 
@@ -225,7 +225,7 @@ Project Link: [https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System](h
 [license-shield]: https://img.shields.io/github/license/alfa2beta3/Smart-Restaurant-Ordering-System.svg?style=for-the-badge
 [license-url]: https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/xing-yang-lee-362a54181
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
