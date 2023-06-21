@@ -8,7 +8,9 @@
 <h3 align="center">Smart-Restaurant-Ordering-System</h3>
 
   <p align="center">
-    project_description
+    The project is a IOT system used for restaurant and small food court. The system consist of several parts. There is a seat booking system, a digital menu, a system for chef to identify customers in just a click on screen, that the food is ready so that they can pick up the food, a hardware that show the food owners at the counter and a payment system. 
+    The system consist of a table hardware, a website, a hardware at the counter, and a payment system.
+    
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
