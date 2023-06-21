@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
