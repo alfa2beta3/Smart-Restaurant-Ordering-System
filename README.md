@@ -113,7 +113,7 @@ To get this project run on your pc, please install the relevant tools, by follow
 1. xampp 
    * Go to the website  [XAMPP](https://www.apachefriends.org/)
    * Select XAMPP for Windows
-     <br> <code><img src=”(your title)” alt=”Image” height=”(your image height)” width=”(your image width)”></code>
+     <br> <code><img src=”pictures/XAMPP.png” alt=”XAMPP download page”></code>
    * 
 
 ### Installation
