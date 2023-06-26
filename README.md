@@ -95,9 +95,10 @@
 * <code><img width="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code> <strong> HTML </strong>
 * <code><img width="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/></code> <strong> CSS </strong>
 * <code><img width="50" src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/Icons/96018_xampp_icon.png" alt="CSS" title="XAMPP"/></code> <strong> XAMPP </strong>
-* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/190887576-6653f877-8439-4521-82f3-403086ead892.png" alt="Sublime Text" title="Sublime Text"/></code>
-* <strong> Sublime Text </strong>
-
+* <code><img width="50" src="https://user-images.githubusercontent.com/25181517/190887576-6653f877-8439-4521-82f3-403086ead892.png" alt="Sublime Text" title="Sublime Text"/></code> <strong> Sublime Text </strong>
+<strong> or <strong><code><img width="50" src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png" alt="Visual Studio Code" title="Visual Studio Code"/></code> <strong> Visual Studio Code </Strong>
+* <code><img width="50" src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/Icons/arduino.jpeg" alt="Arduino" title="Arduino"/></code> <strong> Arduino </Strong>
+* <code><img width="50" src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/Icons/Tinkercode.png" alt="Tinkercode" title="Tinkercode"/></code> <strong> Tinkercode </Strong>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -111,31 +112,45 @@ To get a local copy up and running, please follow these simple steps.
 ### Prerequisites
 
 To get this project run on your pc, please install the relevant tools, by following the instructions below.
-1. xampp 
+1. XAMPP
    * Go to the website  [XAMPP](https://www.apachefriends.org/)
    * Select XAMPP for Windows
      <br> <img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/XAMPP.png" alt="XAMPP download page">
-   * 
+   * Follow the installation instructions.
+
+2. Visual Studio Code
+   * Go to the download link [Visual Studio Code](https://code.visualstudio.com/download)
+      <br> <img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Visual_Studio_Code.png" alt="VS Code download page">
+   * Select Visual Studio Code for Windows
+     <br> <img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Visual_Studio_Code_1.png" alt="Vs Vode download page (select windows)">
+   * Follow the installation instructions.
+
+3. Working with github repository.
+   * To work with github repository, you need to have git bash installed. [Download Git Bash for Windows](https://git-scm.com/download/win)
+   
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+1. Clone the repo
+   * Open command prompt in windows by typing command prompt in desktop search.
+   * Go to your desired location to put the files.
+     <br> <img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Command_Prompt.png" alt="Command Prompt Navigate">
+   * Creat an empty repository.
+     ```sh
+     git init
+     ```
+   * Paste the following line to clone the repository.
+     ```sh
+     git clone https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System.git
+     ```
+2. Go to your file location and copy these files.
+   <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/copy.png" alt="XAMPP files needed to be copied">
+   
+3. Go to your installation path of XAMPP. And then, enter a file called "htdocs". In my case, the path is C/XAMPP/htdocs.
+   Either, you can also write the location like so.
+   <br> <img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/htdocs.png" alt="XAMPP htdocs location">
+   
+4. Paste the files inside this location.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
