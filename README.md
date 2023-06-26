@@ -111,6 +111,8 @@ To get a local copy up and running, please follow these simple steps.
 
 ### Prerequisites
 
+#### Softwares
+
 To get this project run on your pc, please install the relevant tools, by following the instructions below.
 1. XAMPP
    * Go to the website  [XAMPP](https://www.apachefriends.org/)
@@ -127,9 +129,29 @@ To get this project run on your pc, please install the relevant tools, by follow
 
 3. Working with github repository.
    * To work with github repository, you need to have git bash installed. [Download Git Bash for Windows](https://git-scm.com/download/win)
+
+4. Arduino IDE
+   * To work with the hardwares, you would need arduino IDE to load codings into the hardware.
+   * To follow this tutorial, install  [Arduino IDE 1.8.19](https://www.arduino.cc/en/software)
+
+5. Tinkercode
+   * To work with tinkerkit board, you need Tinkercode software. [Download Tinkercode](https://app.tinkercode.my/)
+  
+#### Hardwares
+
+1. Personal Computer / Laptop
+2. Tinkerkit board x 3
+3. ESP32 x 3
+4. Rechargable battery (5V) x 2
+5. Battery holder (2 batteries) x 1
+6. Micro-b USB connector x 1
+7. LCD Display with converter from parallel to serial x 1
+8. Female to male jumpers x 4
    
 
 ### Installation
+
+#### Website
 
 1. Clone the repo
    * Open command prompt in windows by typing command prompt in desktop search.
@@ -152,10 +174,21 @@ To get this project run on your pc, please install the relevant tools, by follow
    
 4. Paste the files inside this location.
 
+#### Table device
+
+For more information, refer to [tutorial](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
+The instructions are quoted from there.
+
+1. In your Arduino IDE, go to File> Preferences
+2. Enter the following into the “Additional Board Manager URLs” field:
+3. Then, click the “OK” button:
+4. Open the Boards Manager. Go to Tools > Board > Boards Manager…
+5. Search for ESP32 and press install button for the “ESP32 by Espressif Systems“:
+6. Select your Board in Tools > Board menu
+7. Select the Port. In case the port dont show up, please install USB driver from your phone's OEM driver website. You could go to your brand's website and search at support section. [Example](https://gsmusbdriver.com/vivo-y21t#driver2)
+
 <!-- Demonstrations -->
 ## Demonstrations
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/tree/main/Documentation)
 
