@@ -174,10 +174,17 @@ To get this project run on your pc, please install the relevant tools, by follow
    
 4. Paste the files inside this location.
 
-#### Table device
+#### Device setup 
 
 For more information, refer to [tutorial](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
 The instructions are quoted from there.
+
+##### Hardware setup
+
+1. Table device
+2. 
+
+##### Software setup (for all)
 
 1. In your Arduino IDE, go to File> Preferences
   <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Preference.png" alt="preferences"> 
@@ -189,7 +196,19 @@ The instructions are quoted from there.
 6. Search for ESP32 and press install button for the “ESP32 by Espressif Systems“:
    <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/ESP32_Plugin.png" alt="esp32 plugin">
 7. Select your Board in Tools > Board menu
-8. Select the Port. In case the port dont show up, please install USB driver from your phone's OEM driver website. You could go to your brand's website and search at support section. [Example](https://gsmusbdriver.com/vivo-y21t#driver2)
+8. If you have connected esp32 to tbe laptop, select the Port. Else, jump to hardware setup.
+9. In case the port dont show up, please install USB driver from your phone's OEM driver website. You could go to your brand's website and search at support section. [Example](https://gsmusbdriver.com/vivo-y21t#driver2)
+10. You would need to configure the IP address of each device to make it work properly.
+    * Go to File, go to your folder, open the file "combined arduino tinkercode".
+      <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Open_File.png" alt="Open file">
+    * Change your network credentials.
+      <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Network_Cred%20.png" alt="Network credential">
+    * Set your network address for device.
+      <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Set_IP_Addr.png" alt="Set address">
+11. Compile the code to esp32 and run it.
+    * <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Compile_Run.png" alt="Compile and run">
+    
+    
 
 <!-- Demonstrations -->
 ## Demonstrations
