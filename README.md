@@ -182,7 +182,10 @@ The instructions are quoted from there.
 ##### Hardware setup
 
 1. Table device
-2. 
+   <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Table-Hardware-1.jpg" alt="table 1">
+   <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Table-Hardware-2.jpg" alt="table 2">
+3. Queue device
+    <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Queue-Hardware.jpg" alt="queue">
 
 ##### Software setup (for all)
 
@@ -206,7 +209,7 @@ The instructions are quoted from there.
     * Set your network address for device.
       <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Set_IP_Addr.png" alt="Set address">
 11. Compile the code to esp32 and run it.
-    * <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Compile_Run.png" alt="Compile and run">
+    <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Compile_Run.png" alt="Compile and run">
     
     
 
@@ -254,9 +257,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+-
 
 
 
