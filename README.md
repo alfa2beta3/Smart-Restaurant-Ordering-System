@@ -180,12 +180,16 @@ For more information, refer to [tutorial](https://randomnerdtutorials.com/instal
 The instructions are quoted from there.
 
 1. In your Arduino IDE, go to File> Preferences
+  <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Preference.png" alt="preferences"> 
 2. Enter the following into the “Additional Board Manager URLs” field: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+   <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Enter_Url_of_ESP32_Lib.png" alt="url"> 
 3. Then, click the “OK” button:
-4. Open the Boards Manager. Go to Tools > Board > Boards Manager…
-5. Search for ESP32 and press install button for the “ESP32 by Espressif Systems“:
-6. Select your Board in Tools > Board menu
-7. Select the Port. In case the port dont show up, please install USB driver from your phone's OEM driver website. You could go to your brand's website and search at support section. [Example](https://gsmusbdriver.com/vivo-y21t#driver2)
+4. Open the Boards Manager. Go to Tools > Board > Boards Manager.
+   <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/Get_To_Board-Manager.png" alt="board manager"> 
+6. Search for ESP32 and press install button for the “ESP32 by Espressif Systems“:
+   <br><img src="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/blob/main/pictures/ESP32_Plugin.png" alt="esp32 plugin">
+7. Select your Board in Tools > Board menu
+8. Select the Port. In case the port dont show up, please install USB driver from your phone's OEM driver website. You could go to your brand's website and search at support section. [Example](https://gsmusbdriver.com/vivo-y21t#driver2)
 
 <!-- Demonstrations -->
 ## Demonstrations
