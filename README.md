@@ -31,21 +31,6 @@
   </a>
 
 <h3 align="center">Smart-Restaurant-Ordering-System</h3>
-
-  <p align="center">
-    The project is a IOT system used for restaurant and small food court. The system consist of several parts. There is a seat booking system, a digital menu, a system for chef to identify customers in just a click on screen, that the food is ready so that they can pick up the food, a hardware that show the food owners at the counter and a payment system. 
-    The system consist of a table hardware, a website, a hardware at the counter, and a payment system.
-    
-    <br />
-    <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/Demo">View Demo</a>
-    ·
-    <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/issues">Request Feature</a>
-  </p>
 </div>
 
 
