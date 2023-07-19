@@ -208,10 +208,19 @@ _For more examples, please refer to the [Documentation](https://github.com/alfa2
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Table device
+    - [ ] Alarm when the food is ready at customer seat
+    - [ ] Show whether the table is booked or not
+- [ ] Queue device
+    - [ ] Show customers' food is which food at the counter
+- [ ] Website
+    - [ ] Allow customer to order food
+    - [ ] Allow customer to view the restaurant descriptions
+    - [ ] Allow customer to book seat
+    - [ ] Allow customer to pay using payment gateway
+    - [ ] Allow the restaurant owner to view the ordered food and customers
+    - [ ] Allow the restaurant owner to view available seat
+    - [ ] Allow the restaurant owner to edit the catalogue (not functioning, still prototype)
 
 See the [open issues](https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/issues) for a full list of proposed features (and known issues).
 
