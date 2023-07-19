@@ -199,7 +199,7 @@ The instructions are quoted from there.
 <!-- Demonstrations -->
 ## Demonstrations
 
-_For more examples, please refer to the [Documentation](https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/tree/main/Documentation)
+_For more information, please refer to the [Documentation](https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System/tree/main/Documentation)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
