@@ -267,10 +267,6 @@ Project Link: [https://github.com/alfa2beta3/Smart-Restaurant-Ordering-System](h
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
