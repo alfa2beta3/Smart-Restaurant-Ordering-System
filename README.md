@@ -249,10 +249,6 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
--
-
-
-
 <!-- CONTACT -->
 ## Contact
 
